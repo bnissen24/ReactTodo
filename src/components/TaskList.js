@@ -11,13 +11,6 @@ class TaskList extends React.Component {
     this.props.onUpdateTaskList(taskList);
   }
 
-  markDone () {
-    const taskIndex = this.props.tasks.findIndex(t => t.id === task.id);
-    let taskList = this.props.tasks;
-    taskList.splice(taskIndex, 1);
-    this.props.onUpdateTaskList(taskList);
-  }
-
   render() {
     const todoItems = this.props.tasks.filter(task => task.column === 'todo')
       .map(task => {
