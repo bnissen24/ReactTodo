@@ -17,7 +17,10 @@ class AddTask extends React.Component {
         <input type="text" className="form-control"
                name="newTask"
                value={this.state.newTask}
-               onChange={(e) => this.setState({ newTask: e.target.value })} />
+               onChange={(e) => {
+                 console.log('onChange', e.target.value);
+                 this.setState({ newTask: e.target.value })
+               }} />
       </form>
     );
   }
